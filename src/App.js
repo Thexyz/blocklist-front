@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import './App.css'; 
 
 const axios = require('axios');
-const URL = 'http://bl.thexyz.com:49155/'
+const URL = 'https://bl.thexyz.com:49156/'
 
 function Copyright() {
   return (
