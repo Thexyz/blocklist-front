@@ -1,29 +1,8 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import './App.css'; 
 
 const axios = require('axios');
 const URL = 'https://bl.thexyz.com:49156/'
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Thexyz
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 
 export default class App extends React.Component {
   constructor(props) {
@@ -99,44 +78,31 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className="paper">
-          <Typography component="h1" variant="h5">
-            Blacklist Check
-          </Typography>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            fullWidth
-            id="text"
-            label="Please Input Domain Name"
-            name="text"
-            autoComplete="text"
-            value={this.state.domain}
-            autoFocus
-            onChange={(e) => this.InputChageDomain(e.target.value)}
-          />
-          <div className={this.getResultClass()}>
-            {this.getResultText()}
-          </div>
-          <div className="button_wrapper"
-            onClick={this.SearchDomain}
-          >
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              className="submit"
+      <div className="form">
+        <div className="left">
+            <div className="form-group">
+              Enter domain, IP or email address<br />
+              <input type="text" className="form-control" id="name" 
+                name="name" 
+                value={this.state.domain} 
+                required
+                onChange={(e) => this.InputChageDomain(e.target.value)}
+              />
+              <br />
+            </div>
+            <div className={this.getResultClass()}>
+              {this.getResultText()}
+            </div>
+            <div className="button_wrapper"
+              onClick={this.SearchDomain}
             >
-              Search
-            </Button>
-          </div>
+              <div className="form-group">
+                <input type="submit" className="btn btn-info btn-block" value="Search"/>
+                <br />
+              </div>
+            </div>
         </div>
-        <Box mt={8}>
-          <Copyright />
-        </Box>
-      </Container>
+      </div>
     );
   }
 }
