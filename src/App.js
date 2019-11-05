@@ -32,9 +32,9 @@ export default class App extends React.Component {
   getResultText() {
     const type = this.validateEmail(this.state.domain) ? 'email' : this.ValidateIPaddress(this.state.domain) ? 'ip' : 'domain'
     if (this.state.status === 1) {
-      return `This ${type} exist in blacklist.`;
+      return `This ${type} does exist in the blacklist.`;
     } else if (this.state.status === 0) {
-      return `This ${type} doesn't exist in blacklist.`;
+      return `This ${type} is not currently listed in the blacklist.`;
     } else return '';
   }
 
