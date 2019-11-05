@@ -59,6 +59,7 @@ input:-webkit-autofill {
 }
 
 div.form_wrapper {
+	margin-bottom: 15px !important;
 	padding-top: 15px;
 	width: 370px;
 	margin: auto;
@@ -182,4 +183,7 @@ body.alert div#placeholder { display: none !important; }
 
 div, select, label {
 clear: both;
+}
+.removal {
+	color: #768B1F !important;
 }

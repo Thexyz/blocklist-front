@@ -97,7 +97,7 @@ export default class App extends React.Component {
               onClick={this.SearchDomain}
             >
               <div className="form-group">
-                <input type="submit" className="btn btn-info btn-block" value="Search"/>
+                <input type="submit" className="btn btn-info btn-block" value="Check"/>
                 <br />
               </div>
             </div>
