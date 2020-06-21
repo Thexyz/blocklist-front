@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Generate certificate
+
+```bash
+$ brew install mkcert
+$ mkdir .ssl
+$ mkcert -key-file .ssl/key.pem -cert-file .ssl/cert.pem *.localhost localhost bl.thexyz.com
+$ mkcert -install
+$ cat .ssl/key.pem .ssl/cert.pem > .ssl/server.pem
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
