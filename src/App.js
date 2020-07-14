@@ -43,9 +43,9 @@ export default class App extends React.Component {
       ? 'ip'
       : 'domain'
     if (this.state.status === 1) {
-      return `This ${type} does exist in the blacklist.`
+      return `This ${type} does exist in the blocklist.`
     } else if (this.state.status === 0) {
-      return `This ${type} is not currently listed in the blacklist.`
+      return `This ${type} is not currently listed in the blocklist.`
     } else return ''
   }
 
